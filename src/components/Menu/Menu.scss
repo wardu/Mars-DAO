@@ -1,0 +1,20 @@
+@use "../../styles/partials/resets";
+@use "../../styles/partials/variables" as *;
+
+.menu {
+  &-top,
+  &-bottom {
+    color: $color-text-title;
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    margin: 0 auto;
+    border-bottom: 1px solid $color-text-body;
+    & li {
+      margin: 2em 2em;
+    }
+  }
+  &-top {
+    padding-top: 7em;
+  }
+}

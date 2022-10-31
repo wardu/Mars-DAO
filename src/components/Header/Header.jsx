@@ -1,6 +1,7 @@
 import rocketIcon from "../../assets/logos/rocket.png";
 import { useState } from "react";
 import "./Header.scss";
+import Menu from "../Menu/Menu";
 
 const Header = () => {
   // Changing burger classes
@@ -37,7 +38,9 @@ const Header = () => {
           </div>
         </nav>
       </section>
-      <section className={menuClass}></section>
+      <section className={menuClass}>
+        <Menu />
+      </section>
     </>
   );
 };
