@@ -1,0 +1,7 @@
+@use "./styles/partials/resets";
+@use "./styles/partials/variables" as *;
+@use "./styles/partials/breakpoints" as *;
+
+body {
+  color: $color-text-body;
+}
