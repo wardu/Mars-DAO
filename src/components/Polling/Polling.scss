@@ -1,0 +1,100 @@
+@use "../../styles/partials/variables" as *;
+
+.polls {
+  &__title {
+    color: $color-text-title;
+    margin: 1em;
+    margin-top: 2em;
+  }
+  &__subtitle {
+    font-size: 0.7em;
+    margin: 1em;
+  }
+}
+.poll {
+  background-color: $color-card;
+  border-radius: 10px;
+  padding: 0.5em;
+  margin: 1em;
+  box-shadow: 5px 9px 7px -4px rgb(126 126 136 / 24%);
+
+  &__time-remaining {
+    display: flex;
+    & > * {
+      padding-left: 1em;
+    }
+  }
+  &__title {
+    color: $color-text-title;
+  }
+  &__view-details {
+    padding: 0.3em 1.15em;
+    border: 1px solid $color-text-body;
+    color: $color-text-title;
+    border-radius: 20px;
+    background-color: $color-card;
+  }
+  &__lower {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.tags {
+  &__container {
+    display: flex;
+  }
+  &__item {
+    padding: 0.3em 1.15em;
+    border-radius: 20px;
+    background-color: $color-background;
+  }
+}
+// tag colors
+.impact {
+  color: $color-tag-impact;
+}
+.asset {
+  color: $color-tag-asset;
+}
+.onboarding {
+  color: $color-tag-onboarding;
+}
+.misc {
+  color: $color-tag-misc;
+}
+.funding {
+  color: $color-tag-funding;
+}
+.greenlight {
+  color: $color-tag-greenlight;
+}
+.oracle {
+  color: $color-tag-oracle;
+}
+.risk {
+  color: $color-tag-risk;
+}
+.deposit {
+  color: $color-tag-deposit;
+}
+.technical {
+  color: $color-tag-technical;
+}
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 1em 2em 1em;
+  width: 90%;
+  height: 2px;
+  background-color: $color-text-body;
+  &__yes {
+    width: 50%;
+    height: 2px;
+    background-color: $color-vote-p;
+  }
+  &__no {
+    width: 20%;
+    height: 2px;
+    background-color: $color-vote-a;
+  }
+}

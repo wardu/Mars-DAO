@@ -23,18 +23,18 @@ const Header = () => {
 
   return (
     <>
-      <section className="header">
-        <div className="header__logo">
-          <img src={rocketIcon} alt="Rocket icon" />
+      <section className='header'>
+        <div className='header__logo'>
+          <img src={rocketIcon} alt='Rocket icon' />
         </div>
-        <div className="header__button">
-          <div className="header__button-container">
+        <div className='header__button'>
+          <div className='header__button-container'>
             <p>Connect Wallet</p>
           </div>
         </div>
         <nav>
           <div className={burgerClass}>
-            <div className="menu-btn__burger" onClick={updateMenu}></div>
+            <div className='menu-btn__burger' onClick={updateMenu}></div>
           </div>
         </nav>
       </section>
