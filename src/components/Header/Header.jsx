@@ -2,6 +2,7 @@ import rocketIcon from "../../assets/logos/rocket.png";
 import { useState } from "react";
 import "./Header.scss";
 import Menu from "../Menu/Menu";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   // Changing burger classes
@@ -25,7 +26,9 @@ const Header = () => {
     <>
       <section className='header'>
         <div className='header__logo'>
-          <img src={rocketIcon} alt='Rocket icon' />
+          <Link to='/'>
+            <img src={rocketIcon} alt='Rocket icon' />
+          </Link>
         </div>
         <div className='header__button'>
           <div className='header__button-container'>

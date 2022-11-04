@@ -40,10 +40,10 @@ const Polling = () => {
             })}
           </div>
           <div className='poll__view-details'>View Details</div>
-          <div className='progress-bar'>
-            <div className='progress-bar__yes myBar'></div>
-            <div className='progress-bar__abstain'></div>
-            <div className='progress-bar__no'></div>
+          <div className='vote-bar'>
+            <div className='vote-bar__yes'></div>
+            <div className='vote-bar__abstain'></div>
+            <div className='vote-bar__no'></div>
           </div>
         </div>
       </section>
