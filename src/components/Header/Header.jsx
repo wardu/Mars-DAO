@@ -42,7 +42,7 @@ const Header = () => {
         </nav>
       </section>
       <section className={menuClass}>
-        <Menu />
+        <Menu updateMenu={updateMenu} />
       </section>
     </>
   );

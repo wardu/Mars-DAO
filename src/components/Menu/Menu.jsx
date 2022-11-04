@@ -1,16 +1,30 @@
 import "./Menu.scss";
 import { Link } from "react-router-dom";
 
-const Menu = () => {
+const Menu = ({ setMenuIsClicked }) => {
   return (
     <>
       <ul className='menu-top'>
         <li>
-          <Link to='/polling'>Polling</Link>
+          <Link
+            to='/polling'
+            onClick={() => {
+              updateMenu();
+            }}
+          >
+            Polling
+          </Link>
         </li>
 
         <li>
-          <Link to='/forum'>Forum</Link>
+          <Link
+            to='/forum'
+            onClick={() => {
+              updateMenu();
+            }}
+          >
+            Forum
+          </Link>
         </li>
       </ul>
       <ul className='menu-bottom'>

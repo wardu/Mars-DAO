@@ -2,6 +2,7 @@
 @use "../../styles/partials/variables" as *;
 
 .menu {
+  z-index: 1;
   &-top,
   &-bottom {
     color: $color-text-title;
