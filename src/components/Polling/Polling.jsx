@@ -5,7 +5,25 @@ import clockIcon from "../../assets/icons/clock.svg";
 import "./Polling.scss";
 
 const Polling = () => {
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+
+  const [pollEnd, setPollEnd] = useState(tomorrow.setHours(0, 0, 0, 0));
+
   const [polls, setPolls] = useState([]);
+
+  // get pollEnd in format NOV 03 2022 16:00 UTC
+  const getPollEnd = () => {
+    const date = new Date(pollEnd).toLocaleString("default");
+    return `${date}    UTC`;
+  };
+
+  // function to get the difference between the current time and the poll end time
+  const getTimeDifference = () => {
+    const now = new Date().getTime();
+    const difference = pollEnd - now;
+    return difference;
+  };
 
   // Gets the Polls data upon load
   const getPolls = async () => {
@@ -16,14 +34,26 @@ const Polling = () => {
     getPolls();
   }, []);
 
+  const convertToHoursAndMinutes = (timestamp) => {
+    const hours = Math.floor(timestamp / (1000 * 60 * 60));
+    const minutes = Math.floor((timestamp % (1000 * 60 * 60)) / (1000 * 60));
+    return `${hours}h ${minutes}m`;
+  };
+
+  // functionconvert unix timestamp to date
+  const convertUnixToDate = (timestamp) => {
+    const date = new Date(timestamp).toLocaleString("default");
+    return date;
+  };
+
   const pollsList = polls.map((poll) => (
     <article key={poll.id} className='poll'>
       <div className='poll__time-remaining'>
         <img src={clockIcon} alt='Icon of a clock face' />
-        <p> 6:06:38 REMAINING</p>
+        <p>{convertToHoursAndMinutes(getTimeDifference())} REMAINING</p>
       </div>
       <div className='poll__details'>
-        <p>POSTED OCT 31 2022 16:00 UTC -</p>
+        <p>POSTED {convertUnixToDate(parseInt(poll.pollDate))} - UTC</p>
         <p>POLL ID 182</p>
       </div>
       <h3 className='poll__title'>{poll.pollTitle}</h3>
@@ -56,7 +86,9 @@ const Polling = () => {
         <h1>Active Polls</h1>
       </div>
       <div className='polls__subtitle'>
-        <h2>3 POLLS - ENDING NOV 03 2022 16:00 UTC</h2>
+        <h2>
+          {polls.length} POLLS ENDING {getPollEnd(pollEnd)}
+        </h2>
       </div>
 
       <div className='polls-container'>{pollsList}</div>

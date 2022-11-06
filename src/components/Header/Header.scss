@@ -99,3 +99,12 @@
   transform: rotate(-45deg) translate(35px, 35px);
   background: $color-text-warn;
 }
+
+.login {
+  &__account {
+    margin-top: 2em;
+    margin-left: 2em;
+    color: $color-text-body;
+    font-size: 0.7em;
+  }
+}
