@@ -27,12 +27,19 @@
   &__title {
     color: $color-text-title;
   }
-  &__view-details {
+  &__view-details,
+  &__add-new {
     padding: 0.3em 1.15em;
     border: 1px solid $color-text-body;
     color: $color-text-title;
     border-radius: 20px;
     background-color: $color-card;
+    width: 40%;
+    margin-top: 1em;
+    margin-left: 1em;
+  }
+  &__add-new {
+    border-color: $color-nav-s;
   }
   &__lower {
     display: flex;

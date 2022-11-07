@@ -1,0 +1,10 @@
+@use "../../styles/partials/resets";
+@use "../../styles/partials/variables" as *;
+
+.login-main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,54 @@
+@use "../../styles/partials/variables" as *;
+
+.poll {
+  background-color: $color-card;
+  border-radius: 10px;
+  padding: 0.5em;
+  margin: 1em;
+  box-shadow: 5px 9px 7px -4px rgb(126 126 136 / 24%);
+
+  & input {
+    width: 90%;
+    height: 2em;
+    background-color: $color-card;
+    color: $color-text-title;
+    border: 1px solid $color-text-body;
+    border-radius: 10px;
+    outline: none;
+    padding: 0.5em;
+    font-size: 0.9em;
+  }
+
+  & textarea {
+    width: 90%;
+    height: 9em;
+    background-color: $color-card;
+    color: $color-text-title;
+    font-size: 0.9em;
+    font-weight: 500;
+    padding: 0.5em;
+    resize: none;
+    border: 1px solid $color-text-body;
+    border-radius: 10px;
+    outline: none;
+    margin: 1em 0 0.5em 0;
+  }
+  &__tags {
+    & button {
+      background-color: $color-card;
+      color: $color-vote-a;
+      margin-left: 1em;
+      margin-bottom: 0.5em;
+      &-item {
+        width: 30%;
+      }
+    }
+  }
+}
+.tags__container {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}

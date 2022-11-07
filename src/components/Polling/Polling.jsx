@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import clockIcon from "../../assets/icons/clock.svg";
 
@@ -82,6 +83,9 @@ const Polling = () => {
 
   return (
     <section className='polls'>
+      <div className='poll__add-new'>
+        <Link to='/polling/add'>Add New Poll</Link>
+      </div>
       <div className='polls__title'>
         <h1>Active Polls</h1>
       </div>
