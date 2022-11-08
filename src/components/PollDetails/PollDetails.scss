@@ -1,0 +1,21 @@
+@use "../../styles/partials/variables" as *;
+
+.poll {
+  &__back-button {
+    margin: 0.5em;
+    color: $color-vote-a;
+  }
+  &__comment-form-button {
+    padding: 0.3em 1.15em;
+    border: 1px solid $color-text-body;
+    color: $color-text-title;
+    border-radius: 20px;
+    background-color: $color-card;
+    width: 40%;
+    margin-top: 1em;
+    margin-left: 1em;
+    & p {
+      margin: 0 1.4em;
+    }
+  }
+}

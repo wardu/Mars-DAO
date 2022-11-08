@@ -90,18 +90,32 @@
 .vote-bar {
   display: flex;
   justify-content: space-between;
-  margin: 2em 1em 2em 1em;
+  margin: 1em 1em 2em 1em;
   width: 90%;
   height: 2px;
   background-color: $color-text-body;
+  &__title {
+    margin-top: 1em;
+  }
   &__yes {
     width: 50%;
     height: 2px;
     background-color: $color-vote-p;
+    display: flex;
+    justify-content: center;
+  }
+  &__abstain {
+    width: 30%;
+    height: 2px;
+    background-color: $color-text-body;
+    display: flex;
+    justify-content: center;
   }
   &__no {
     width: 20%;
     height: 2px;
     background-color: $color-vote-a;
+    display: flex;
+    justify-content: center;
   }
 }
