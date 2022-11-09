@@ -68,7 +68,7 @@ const Header = () => {
       <section className='login'>
         <div className='login__display'>
           <h3 className='login__account'>
-            Your address:
+            {/* Your address: */}
             {defaultAccount}
           </h3>
         </div>

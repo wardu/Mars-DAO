@@ -7,4 +7,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  & p {
+    width: 80%;
+    position: relative;
+    top: 2em;
+    text-align: center;
+  }
 }
