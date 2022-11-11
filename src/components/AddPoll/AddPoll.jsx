@@ -27,7 +27,7 @@ const addPoll = () => {
       pollTags,
     };
     await axios
-      .post("http://localhost:8080/polling", poll)
+      .post(`${process.env.REACT_APP_BASE_URL}/polling`, poll)
       .then(() => {
         navigate("/polling");
       })

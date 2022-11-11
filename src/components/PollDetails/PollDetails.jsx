@@ -37,7 +37,7 @@ const PollDetails = () => {
     console.log(e.comment);
     const comment = e.target.value;
     const response = await axios.post(
-      `http://localhost:8080/polling/${pollId}/comments`,
+      `${process.env.REACT_APP_BASE_URL}/polling/${pollId}/comments`,
       comment
     );
     setPoll(response.data);
@@ -45,7 +45,7 @@ const PollDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/polling/${pollId}`)
+      .get(`${process.env.REACT_APP_BASE_URL}/polling/${pollId}`)
       .then((res) => {
         setPoll(res.data);
       })

@@ -28,7 +28,9 @@ const Polling = () => {
 
   // Gets the Polls data upon load
   const getPolls = async () => {
-    const response = await axios.get("http://localhost:8080/polling");
+    const response = await axios.get(
+      `${process.env.REACT_APP_BASE_URL}/polling`
+    );
     setPolls(response.data);
   };
   useEffect(() => {
