@@ -46,7 +46,7 @@
 
 ## About The Project
 
-<img src="./src/assets/images/mars-dao-demo.gif" alt="Logo" >
+<img width="50%" src="./src/assets/images/mars-dao-demo.gif" alt="Logo" >
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
