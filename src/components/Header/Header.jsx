@@ -10,16 +10,16 @@ const Header = () => {
   const [connButtonText, setConnButtonText] = useState("Connect Wallet");
 
   const connectWalletHandler = () => {
-    if (window.ethereum) {
-      window.ethereum
-        .request({ method: "eth_requestAccounts" })
-        .then((result) => {
-          accountChangedHandler(result[0]);
-          setConnButtonText("Wallet Connected");
-        });
-    } else {
-      setErrorMessage("Please Install MetaMask");
-    }
+    // if (window.ethereum) {
+    //   window.ethereum
+    //     .request({ method: "eth_requestAccounts" })
+    //     .then((result) => {
+    //       accountChangedHandler(result[0]);
+    //       setConnButtonText("Wallet Connected");
+    //     });
+    // } else {
+    setErrorMessage("Please Install MetaMask");
+    // }
   };
 
   const accountChangedHandler = (newAccount) => {
@@ -27,7 +27,7 @@ const Header = () => {
     localStorage.setItem("defaultAccount", defaultAccount);
   };
 
-  window.ethereum.on("accountsChanged", accountChangedHandler);
+  // window.ethereum.on("accountsChanged", accountChangedHandler);
   // Changing burger classes
   const [burgerClass, setBurgerClass] = useState("menu-btn");
   const [menuClass, setMenuClass] = useState("menu hidden");
